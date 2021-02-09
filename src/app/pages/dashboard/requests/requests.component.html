@@ -1,0 +1,65 @@
+<table class="mdl-data-table mdl-js-data-table mdl-data-table mdl-shadow--2dp">
+    <thead>
+      <tr>
+        <th class="mdl-data-table__cell--non-numeric" *ngFor="let item of tableHeader">{{ item }}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data" [class.is-selected]="item.isSelected">
+        <td class="mdl-data-table__cell--non-numeric">{{ item.user }}</td>
+        <td class="mdl-data-table__cell--non-numeric">{{ item.requestDetials.vehicelType }}</td>
+        <td class="mdl-data-table__cell--non-numeric">{{ item.requestDetials.passengers}}</td>
+
+        <td class="mdl-data-table__cell--non-numeric">{{ item.requestDetials.pickupLocation }}</td>
+        <td class="mdl-data-table__cell--non-numeric">{{ item.requestDetials.requestTime }}</td>
+        <td class="mdl-data-table__cell--non-numeric"> 
+            <button  class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-{{ color }}" (click)="assignDriver()">
+                Assign
+          </button>
+        </td>
+        <td class="mdl-data-table__cell--non-numeric">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button--colored-{{ color }}" (click)="flyTo()">
+                View Map
+          </button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+  
+  <button id="show-dialog" type="button" class="mdl-button">Show Dialog</button>
+  <dialog class="mdl-dialog" style="background-color: #7B7B7B;width: fit-content;">
+    <div class="mdl-dialog__content">
+        <table  class="table" style="color: white;font-size: larger;padding-bottom: 5px;">
+            <tr style="font-size: x-large;text-align: left;">
+              <th ></th>
+              <th   >Driver</th>
+              <th  >Vehicle</th>
+              <th >Vehicle Number</th>
+              <th>Status</th>
+              <th>Contact</th>
+      
+            </tr>
+            <br>
+            <tr *ngFor = "let driver of drivers">
+              <td  ><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></td>
+              <td style="font-size: x-large;font-weight: lighter;padding-top: 5px;">{{driver.name}}</td>
+              
+              <td style="font-size: x-large;font-weight: lighter;padding-top: 5px;" >{{driver.vehicle}}</td>
+              <td style="font-size: x-large;font-weight: lighter;padding-top: 5px;" >{{driver.vehicle_number}}</td>
+              <td style="font-size: x-large;font-weight: lighter;padding-top: 5px;" >{{driver.status}}</td>
+              <td style="font-size: x-large;font-weight: lighter;padding-top: 5px;" >{{driver.contact_number}}</td>
+      
+      
+            </tr>
+            </table>
+
+
+            
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button close" style="color: white;">Assign</button>
+      <button type="button" class="mdl-button close" style="color: white;">close</button>
+    </div>
+  </dialog>
+  

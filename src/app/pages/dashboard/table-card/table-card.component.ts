@@ -9,75 +9,77 @@ export class TableCardComponent {
   @HostBinding('class.projects-table') public readonly projectsTable = true;
 
   public tableHeader: string[] = [
-    'Project',
-    'Responsible',
-    'Client contact',
-    'Deadline',
-    'Progress',
+    'Driver',
+    'Vehicle',
+    'Status',
+    'Contact',
+    'Status',
   ];
   public data: object[] = [
+   
     {
-      project: 'Darkboard',
+      project: 'Dorji Khandu',
       responsible: [
         {
           color: 'color--light-blue',
-          name: 'Alex',
-        },
-        {
-          color: 'background-color--primary',
-          name: 'Dina',
-        },
-        {
-          color: 'color--orange',
-          name: 'Misha',
-        },
+          name: 'available',
+        }
       ],
-      email: 'Luke@skywalker.com',
-      deadline: 'Jun 15',
-      progress: 44,
-      isSelected: false,
-    },
-    {
-      project: 'Big financial app',
-      responsible: [
-        {
-          color: 'color--orange',
-          name: 'Vlada',
-        },
-      ],
-      email: 'Boss@financial.com',
-      deadline: 'Mar 1',
-      progress: 14,
-      isSelected: true,
-    },
-    {
-      project: 'New Year office decoration',
-      responsible: [
-        {
-          color: 'background-color--primary',
-          name: 'Dina',
-        },
-        {
-          color: 'color--orange',
-          name: 'Vlada',
-        },
-      ],
-      email: 'info@creativeit.io',
-      deadline: 'Dec 25',
+      email: '17263764',
+      deadline: 'BG-2A-1002 | Honda City',
       progress: 100,
       isSelected: false,
     },
     {
-      project: 'Don\'t worry, be happy!!!',
+      project: 'Kuenzang',
+      responsible: [
+        {
+          color: 'color--light-blue',
+          name: 'available',
+        }
+      ],
+      email: '17263764',
+      deadline: 'BG-2A-1002 | Toyota Hilux',
+      progress: 100,
+      isSelected: false,
+    },
+    {
+      project: 'Kinley Wangyal',
+      responsible: [
+        {
+          color: 'color--orange',
+          name: 'Dropping Katherine',
+        },
+      ],
+      email: '77854854',
+      deadline: 'BG-1-3001 | Toyota Camry',
+      progress: 14,
+      isSelected: true,
+    },
+    {
+      project: 'Sonam Eden',
+      responsible: [
+        {
+          color: 'color--orange',
+          name: 'Dropping Nima Tenzin',
+        },
+      ],
+      email: '17558845',
+      deadline: 'BG-1A-3341 | Toyota Prado',
+      progress: 90,
+      isSelected: false,
+    },
+    {
+      project: 'Hem Bdr',
       responsible: [
         {
           color: 'background-color--secondary',
-          name: 'Everybody',
+          name: 'Not Avialable',
         },
       ],
-      email: 'Contact@happyness.com',
-      deadline: 'Yesterday',
-      progress: 31,
+      email: '17555584',
+      deadline: 'BG-1A-3341 | Toyota Prado',
+      progress: 0,
       isSelected: false,
     },
   ];

@@ -3,24 +3,13 @@
     <base-page-top>
       <div class="mdl-layout-spacer"></div>
 
-      <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable search">
-        <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-          <i class="material-icons">search</i>
-        </label>
-
-        <div class="mdl-textfield__expandable-holder">
-          <input class="mdl-textfield__input" type="text" id="search"/>
-          <label class="mdl-textfield__label" for="search">Enter your query...</label>
-        </div>
-      </div>
-
       <app-notification-menu></app-notification-menu>
 
       <app-message-menu></app-message-menu>
 
       <div class="avatar-dropdown" id="icon">
-        <span>{{ user.username }}</span>
-        <img src="assets/images/Icon_header.png">
+        <span>UNDP</span>
+        <!-- <img src="assets/images/undp.png"> -->
       </div>
       <ul
         class="mdl-menu mdl-list mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-shadow--2dp account-dropdown"
@@ -28,8 +17,8 @@
         <li class="mdl-list__item mdl-list__item--two-line">
             <span class="mdl-list__item-primary-content">
               <span class="material-icons mdl-list__item-avatar"></span>
-              <span>{{ user.username }}</span>
-              <span class="mdl-list__item-sub-title">{{ user.email }}</span>
+              <span>UNDP</span>
+              <span class="mdl-list__item-sub-title">{{ user.usernam }}</span>
           </span>
         </li>
         <li class="list__item--border-top"></li>
@@ -75,14 +64,12 @@
       <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect mdl-shadow--2dp settings-dropdown"
           for="more">
         <li class="mdl-menu__item">
-          Settings
+          Profile
         </li>
-        <a class="mdl-menu__item" href="https://github.com/CreativeIT/material-angular-dashboard/issues">
-          Support
-        </a>
-        <li class="mdl-menu__item">
-          F.A.Q.
+        <li class="mdl-menu__item" (click)="logout()">
+          Log Out
         </li>
+      
       </ul>
     </base-page-top>
   </div>

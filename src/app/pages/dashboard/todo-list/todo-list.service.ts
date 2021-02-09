@@ -5,25 +5,20 @@ export class TodoListService {
   public getItems(): object[] {
     return [
       {
-        title: 'Fix bugs',
+        title: 'Dorji Sonam Requesting pickup',
         id: 1651644545,
         completed: false,
       },
       {
-        title: 'Implement 30% of my feature',
+        title: 'Katherine Requesting schedule pickup',
         id: 1651646545,
         completed: false,
       },
       {
-        title: 'Fencing',
+        title: 'Bob Requesting pickup',
         id: 5451646545,
         completed: true,
-      },
-      {
-        title: 'Read an article about Test-Driven Development',
-        id: 5428646545,
-        completed: false,
-      },
+      }
     ];
   }
 }
